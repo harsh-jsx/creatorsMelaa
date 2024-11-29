@@ -29,18 +29,18 @@ const Navbar = () => {
       tl.current = gsap
         .timeline({ paused: true })
         .to(".menu-overlay", {
-          duration: 1.25,
+          duration: 1,
           clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
           ease: "power4.inOut",
         })
         .to(".menu-overlay", {
-          duration: 1.25,
+          duration: 1,
           clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
           ease: "power4.inOut",
         })
         .to(".menu-link-item-holder", {
           y: 0,
-          duration: 1,
+          duration: 0.75,
           stagger: 0.1,
           ease: "power4.inOut",
           delay: -0.75,

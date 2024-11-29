@@ -14,14 +14,15 @@ const Creators = () => {
 
     // Horizontal scroll animation
     gsap.to(images, {
-      xPercent: -100 * (images.length - 1),
+      xPercent: -200,
       scrollTrigger: {
         trigger: container,
         start: "top 20%", // Adjust to start when the top of the container hits the top of the viewport
         pin: true,
         scrub: 1,
-        end: "+=3500",
+        end: "1500",
         invalidateOnRefresh: true,
+        markers: true,
       },
     });
 
