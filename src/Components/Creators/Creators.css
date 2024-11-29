@@ -118,3 +118,7 @@
     flex-wrap: nowrap;
   }
 }
+
+* {
+  border: 1px red solid;
+}
