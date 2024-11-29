@@ -70,13 +70,9 @@ const Navbar = () => {
       <div className="menu-overlay">
         <div className="menu-overlay-bar">
           <div className="menu-logo"></div>
-          <div className="menu-close" onClick={toggleMenu}>
-            &#x2715;
-          </div>
+          <div className="menu-close" onClick={toggleMenu}></div>
         </div>
-        <div className="menu-close-icon">
-          <p>&#x2715;</p>
-        </div>
+        <div className="menu-close-icon"></div>
         <div className="menu-copy">
           <div className="menu-links">
             {menuLinks.map((Link, index) => (
