@@ -79,3 +79,13 @@ html.lenis body {
   padding: 40px;
   text-align: center;
 }
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background-color: #00ff00; /* Progress bar color */
+  width: 0;
+  z-index: 1000; /* Ensure it's above other elements */
+}

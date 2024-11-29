@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Loader from "./Components/Loader/Loader";
 import Cursor from "./Components/Cursor/Cursor";
 import Navbar from "./Components/Navbar/Navbar";
@@ -11,8 +11,10 @@ import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Testimonials from "./Components/Testimonials/Testimonials";
+
 function App() {
   const [loading, setLoading] = useState(true);
+  const progressBarRef = useRef(null);
 
   const lenis = new Lenis();
 
@@ -29,8 +31,25 @@ function App() {
   // Disable lag smoothing in GSAP to prevent any delay in scroll animations
   gsap.ticker.lagSmoothing(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progressBarRef.current.style.width = `${scrollPercent}%`;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div id="smooth-wrapper">
+      <div ref={progressBarRef} className="progress-bar"></div>
       {/* {loading && <Loader setLoading={setLoading} />} */}
       <div id="smooth-content">
         <Cursor />
