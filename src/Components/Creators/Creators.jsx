@@ -14,7 +14,7 @@ const Creators = () => {
 
     // Horizontal scroll animation
     gsap.to(images, {
-      xPercent: -200,
+      xPercent: -450,
       scrollTrigger: {
         trigger: container,
         start: "top 20%", // Adjust to start when the top of the container hits the top of the viewport
