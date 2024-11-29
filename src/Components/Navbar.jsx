@@ -1,9 +1,10 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
 import "./nav.css";
-import Logo from "../assets/logo.png";
 import { gsap } from "gsap";
+import logo from "../assets/logo.png";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom";
 
 const menuLinks = [
   { path: "/", label: "Home" },
@@ -60,8 +61,7 @@ const Navbar = () => {
     <div className="menu-container" ref={container}>
       <div className="menu-bar">
         <div className="menu-logo">
-          <img src="../assets/logo.png" alt="" />
-          <h1>CreatorsMela</h1>
+          <img src={logo} alt="" className="logo-image" />
         </div>
         <div className="menu-open" onClick={toggleMenu}>
           <p>Menu</p>
@@ -69,9 +69,7 @@ const Navbar = () => {
       </div>
       <div className="menu-overlay">
         <div className="menu-overlay-bar">
-          <div className="menu-logo">
-            <h1>CreatorsMela</h1>
-          </div>
+          <div className="menu-logo"></div>
           <div className="menu-close" onClick={toggleMenu}>
             &#x2715;
           </div>
@@ -84,8 +82,7 @@ const Navbar = () => {
             {menuLinks.map((Link, index) => (
               <div className="menu-link-item" key={index}>
                 <div className="menu-link-item-holder" onClick={toggleMenu}>
-                  <a to={Link.path} className="menu-link">
-                    {" "}
+                  <a href={Link.path} className="menu-link">
                     {Link.label}
                   </a>
                 </div>
