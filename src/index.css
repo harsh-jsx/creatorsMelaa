@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: int;
+}
+@font-face {
+  font-family: int;
+  src: url(./assets/integral-bold.woff2);
 }
 
 body {

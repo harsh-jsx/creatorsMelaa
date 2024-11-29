@@ -1,0 +1,123 @@
+/* Hide default cursor */
+* {
+  cursor: none !important;
+}
+
+/* Main cursor circle */
+.cursor {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+  mix-blend-mode: difference;
+}
+
+/* Inner cursor dot */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+/* Regular hover state */
+.cursor--hover {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Special hover state for hover-change class */
+.cursor--view {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  mix-blend-mode: normal;
+}
+
+.cursor-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.cursor-dot--hover {
+  width: 12px;
+  height: 12px;
+}
+
+/* Hide cursor on mobile */
+@media (max-width: 768px) {
+  .cursor,
+  .cursor-dot {
+    display: none;
+  }
+  * {
+    cursor: auto !important;
+  }
+}
+/* Split loader */
+.loader--split {
+  display: flex;
+  flex-direction: row;
+}
+
+.loader--split::before,
+.loader--split::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: black;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.loader--split::before {
+  left: 0;
+}
+
+.loader--split::after {
+  right: 0;
+}
+
+.loader--split.hide::before {
+  transform: translateX(-100%);
+}
+
+.loader--split.hide::after {
+  transform: translateX(100%);
+}
+
+/* Circular loader */
+.loader-circle {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

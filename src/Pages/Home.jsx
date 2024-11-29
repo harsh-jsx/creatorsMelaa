@@ -1,6 +1,7 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
+import Navbar from "../Components/Navbar/Navbar";
 import "./Home.css";
+import Clients from "../Components/Navbar/OurClients/Clients";
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
 
       <Navbar />
       <div className="content">
-        <h1 className="title">Welcome</h1>
+        <h1 className="title hover-change">Welcome</h1>
         <p className="subtitle">To my site.</p>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useRef, useEffect } from "react";
 import "./nav.css";
 import { gsap } from "gsap";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
 

@@ -1,0 +1,41 @@
+.clients-container {
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.clients-container h1 {
+  margin: 2em;
+}
+
+.clients {
+  display: flex;
+  animation: scroll 5s linear infinite;
+}
+
+.client {
+  display: flex;
+  gap: 40px;
+  flex-shrink: 0;
+}
+
+.client img {
+  height: 60px;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Optional: Pause animation on hover */
+.clients:hover {
+  animation-play-state: paused;
+}
