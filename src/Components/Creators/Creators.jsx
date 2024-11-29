@@ -83,7 +83,7 @@ const Creators = () => {
             <h1>Creator Name 6</h1>
             <div className="hover-text"> Creator 6</div>
           </div>
-          <div className="creator-card hover-change">
+          <div className="creator-card creator-card-last hover-change">
             <h1>Know more</h1>
             <h2>
               Click <a href="/creators">HERE</a> to know our creators

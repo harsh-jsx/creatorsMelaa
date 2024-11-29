@@ -108,3 +108,13 @@
 .creator-card:hover .hover-text {
   opacity: 1; /* Show text on hover */
 }
+
+@media (max-width: 768px) {
+  .creator-card-last {
+    display: none;
+  }
+
+  .creators-container {
+    flex-wrap: nowrap;
+  }
+}
