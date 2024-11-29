@@ -8,20 +8,24 @@
 
 .creators-content {
   padding: 60px 0;
+  position: relative;
 }
-
-h1 {
+.creators-content h1 {
   color: white;
   text-align: center;
   font-size: clamp(3rem, 5vw, 5rem);
   margin-bottom: 60px;
+  position: relative; /* Use sticky positioning */
+  top: 0;
+  background-color: #000; /* Match the background color */
+  z-index: 10; /* Ensure it stays above other content */
+  padding: 20px 0;
 }
 
 .creators-container {
   display: flex;
   gap: 40px;
   padding: 0 20px;
-  margin-top: 200px;
   position: relative;
   height: 70vh;
   align-items: center;
@@ -75,4 +79,32 @@ h1 {
   font-size: clamp(1rem, 2vw, 1.5rem);
   text-align: center;
   color: white;
+}
+
+.creator-card h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem); /* Responsive font size */
+  text-align: center;
+  color: white;
+  margin-top: 10px; /* Space between image and name */
+  margin-bottom: 0; /* Remove default margin */
+  z-index: 1; /* Bring the text above other elements */
+}
+
+.hover-text {
+  position: absolute;
+  bottom: 10px; /* Position at the bottom of the card */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  pointer-events: none; /* Prevent hover text from blocking other interactions */
+  z-index: 2; /* Ensure it is above other elements */
+}
+
+.creator-card:hover .hover-text {
+  opacity: 1; /* Show text on hover */
 }

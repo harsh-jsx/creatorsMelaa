@@ -19,7 +19,7 @@ const Cursor = () => {
       gsap.to(cursor, {
         x: clientX,
         y: clientY,
-        duration: 0.5,
+        duration: 0.15,
         ease: "power2.out",
       });
 
@@ -27,7 +27,7 @@ const Cursor = () => {
       gsap.to(cursorDot, {
         x: clientX,
         y: clientY,
-        duration: 0.1,
+        duration: 0.05,
       });
     };
 
@@ -74,7 +74,7 @@ const Cursor = () => {
     <>
       <div className="cursor" ref={cursorRef}>
         <span className="cursor-text" ref={cursorTextRef}>
-          View
+          VIEW
         </span>
       </div>
       <div className="cursor-dot" ref={cursorDotRef}></div>
