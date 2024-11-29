@@ -1,31 +1,41 @@
-.testimonials-container {
-  background-color: #f5f5ff;
-  color: #333;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-h2::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 3px;
-  background-color: #ff3366;
-  margin: 10px auto 0;
-}
-
-.testimonial {
+.carousel-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
+  justify-content: center;
+  height: 70vh;
+  position: relative;
+  background-color: black; /* Dark background */
+  color: #f0f0f0; /* Light text color */
+  text-align: center;
+}
+
+.carousel-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f0f0f0; /* Light button color */
+}
+
+.carousel-button:hover {
+  color: #00ff00; /* Highlight color on hover */
+}
+
+.carousel-button:first-of-type {
+  left: 10px;
+}
+
+.carousel-button:last-of-type {
+  right: 10px;
+}
+
+.testimonial {
+  max-width: 600px;
+  padding: 20px;
 }
 
 .testimonial-image {
@@ -33,46 +43,35 @@ h2::after {
   height: 100px;
   border-radius: 50%;
   margin-bottom: 20px;
+  border: 2px solid #00ff00; /* Border for image */
+}
+
+h3 {
+  color: white; /* Highlighted name color */
+  margin-bottom: 10px;
 }
 
 p {
-  font-size: 20px;
-  color: #555;
-  margin: 0 0 20px;
-  max-width: 600px;
+  font-size: 16px;
+  color: #ccc; /* Softer text color */
 }
 
-h4 {
-  font-size: 22px;
-  color: #333;
-  font-weight: bold;
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  h2 {
-    font-size: 28px;
-  }
-
-  p {
-    font-size: 18px;
-  }
-
-  h4 {
-    font-size: 20px;
-  }
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #555; /* Darker dot color */
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
 }
 
-@media (max-width: 480px) {
-  h2 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  h4 {
-    font-size: 18px;
-  }
+.dot.active {
+  background-color: #00ff00; /* Active dot color */
 }
