@@ -1,77 +1,63 @@
 .home {
-  position: relative;
+  text-align: center;
+  color: white;
+  background: url("your-background-image.jpg") no-repeat center center/cover;
   height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-}
-
-.video-background video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Darkens the video for better text visibility */
-  z-index: 2;
-}
-
-.content {
-  position: relative;
-  z-index: 3;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
-  text-align: center;
-  padding: 0 20px;
+  position: relative;
+  overflow: hidden;
 }
 
-.title {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.home video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.hero-section {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.main-title {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.highlight {
+  color: #e91e63; /* Pink color */
 }
 
 .subtitle {
-  font-size: 1.5rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  margin: 10px 0;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .subtitle {
-    font-size: 1.2rem;
-  }
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-/* Make sure your Navbar component has a higher z-index */
-nav {
-  position: relative;
-  z-index: 4;
+.cta-button {
+  background-color: #9c27b0; /* Purple color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #7b1fa2; /* Darker purple */
 }

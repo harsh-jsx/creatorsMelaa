@@ -10,7 +10,7 @@ import Offers from "./Components/WhatWeOffer/Offers";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-
+import Testimonials from "./Components/Testimonials/Testimonials";
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -39,6 +39,7 @@ function App() {
         <Creators />
         <Clients />
         <Offers />
+        <Testimonials />
         <Footer />
       </div>
     </div>

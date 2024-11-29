@@ -1,14 +1,16 @@
 .clients-container {
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(135deg, #000000, #8b005d);
+  background-color: white;
+  /* background: linear-gradient(135deg, #000000, #8b005d); */
   padding: 20px 0;
   text-align: center;
+  padding-bottom: 90px;
 }
 
 .clients-container h1 {
   margin: 2em;
-  color: white;
+  color: black;
 }
 
 .clients {

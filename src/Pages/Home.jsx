@@ -1,26 +1,25 @@
 import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import "./Home.css";
-import Clients from "../Components/OurClients/Clients";
 
 const Home = () => {
   return (
     <div className="home">
-      <div className="video-background">
-        <video autoPlay loop muted playsInline>
-          <source
-            src="https://duruthemes.com/demo/html/acens/video.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <div className="overlay"></div>
-      </div>
-
       <Navbar />
-      <div className="content">
-        <h1 className="title hover-change">Welcome</h1>
-        <p className="subtitle">To my site.</p>
+      <video autoPlay loop muted playsInline>
+        <source
+          src="https://www.famebliss.com/assets/slider.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div className="hero-section">
+        <h1 className="main-title">
+          <span className="highlight">CreatorsMela</span>
+        </h1>
+        <h2 className="subtitle">Your Gateway to Influencer Success</h2>
+        <p className="description">Connect with Creators</p>
+        <button className="cta-button">Get Started →</button>
       </div>
     </div>
   );

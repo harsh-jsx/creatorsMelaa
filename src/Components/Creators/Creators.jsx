@@ -22,7 +22,6 @@ const Creators = () => {
         scrub: 1,
         end: "1500",
         invalidateOnRefresh: true,
-        markers: true,
       },
     });
 
