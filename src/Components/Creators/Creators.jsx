@@ -15,12 +15,13 @@ const Creators = () => {
     // Horizontal scroll animation
     gsap.to(images, {
       xPercent: -100 * (images.length - 1),
-      ease: "none",
+      ease: "power2.inOut",
       scrollTrigger: {
         trigger: container,
+        start: "top 25%",
         pin: true,
         scrub: 1,
-        end: "+=3000",
+        end: "+=3500",
         invalidateOnRefresh: true,
       },
     });

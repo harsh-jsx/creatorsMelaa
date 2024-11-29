@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import "./Home.css";
-import Clients from "../Components/Navbar/OurClients/Clients";
+import Clients from "../Components/OurClients/Clients";
 
 const Home = () => {
   return (
