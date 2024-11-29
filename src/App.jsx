@@ -48,8 +48,8 @@ function App() {
 
   return (
     <div id="smooth-wrapper">
-      <div ref={progressBarRef} className="progress-bar"></div>
       {loading && <Loader setLoading={setLoading} />}
+      <div ref={progressBarRef} className="progress-bar"></div>
       <div id="smooth-content">
         <Cursor />
         <Navbar />

@@ -8,8 +8,8 @@ const Loader = ({ setLoading }) => {
       onComplete: () => setLoading(false),
     });
 
-    tl.from(".loader-text", {
-      opacity: 0,
+    tl.to(".loader-text", {
+      opacity: 1,
       duration: 1,
     })
       .to(".loader-progress", {
