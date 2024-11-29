@@ -21,6 +21,7 @@ h1 {
   display: flex;
   gap: 40px;
   padding: 0 20px;
+  margin-top: 200px;
   position: relative;
   height: 70vh;
   align-items: center;

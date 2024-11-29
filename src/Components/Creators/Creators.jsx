@@ -18,7 +18,7 @@ const Creators = () => {
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: container,
-        start: "top 25%",
+        start: "top 20%",
         pin: true,
         scrub: 1,
         end: "+=3500",

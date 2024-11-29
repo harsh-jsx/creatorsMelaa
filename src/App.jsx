@@ -12,13 +12,11 @@ function App() {
   return (
     <>
       {loading && <Loader setLoading={setLoading} />}
-      <div style={{ display: loading ? "none" : "block" }}>
-        <Cursor />
-        <Navbar />
-        <Home />
-        <Creators />
-        <Clients />
-      </div>
+      <Cursor />
+      <Navbar />
+      <Home />
+      <Creators />
+      <Clients />
     </>
   );
 }
