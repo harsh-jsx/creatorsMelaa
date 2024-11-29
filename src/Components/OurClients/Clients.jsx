@@ -1,5 +1,6 @@
 import React from "react";
-import "./Clients.css";
+import "./clients.css";
+
 const Clients = () => {
   return (
     <div className="clients-container">
