@@ -26,7 +26,7 @@ const Loader = ({ setLoading }) => {
   return (
     <div className="loader">
       <div className="loader-content">
-        <h1 className="loader-text">CREATORSMELA</h1>
+        <h2 className="loader-text">CREATORSMELA</h2>
         <div className="loader-progress-container">
           <div className="loader-progress"></div>
         </div>
