@@ -1,0 +1,66 @@
+/* Footer.css */
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.footer .highlight {
+  color: #ff007f; /* Example color for "Creative" and "We're hiring" */
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-nav {
+  margin-bottom: 20px;
+}
+
+.footer-nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: #ff007f;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.social-icons a:hover {
+  color: #ff007f;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+}
