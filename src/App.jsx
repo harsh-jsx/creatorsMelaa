@@ -1,16 +1,18 @@
+import { ScrollTrigger } from "gsap/all";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Lenis from "lenis";
+import gsap from "gsap";
 import React, { useState, useEffect, useRef } from "react";
 import Loader from "./Components/Loader/Loader";
 import Cursor from "./Components/Cursor/Cursor";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/HomePage/Home";
-import Lenis from "lenis";
-import gsap from "gsap";
 import ContactForm from "./Pages/ContactPage/ContactUs";
 import InfluencerForm from "./Pages/InfluencerForm/Influencer-form";
-import { ScrollTrigger } from "gsap/all";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import Exclusive from "./Pages/Exclusive/Exclusive";
+import Blogs from "./Pages/Blogs/Blogs";
+
 function App() {
   const [loading, setLoading] = useState(true);
   const progressBarRef = useRef(null);
@@ -58,6 +60,7 @@ function App() {
             <Route path="/contact" element={<ContactForm />} />
             <Route path="/influencer-contact" element={<InfluencerForm />} />
             <Route path="/exclusive" element={<Exclusive />} />
+            <Route path="/blogs" element={<Blogs />} />
           </Routes>
         </Router>
         <Footer />

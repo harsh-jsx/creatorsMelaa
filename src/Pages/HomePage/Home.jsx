@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./Home.css";
 import Creators from "../../Components/Creators/Creators";
 import Clients from "../../Components/OurClients/Clients";
