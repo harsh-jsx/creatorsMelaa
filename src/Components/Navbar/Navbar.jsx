@@ -11,7 +11,7 @@ const menuLinks = [
   { path: "/services", label: "Services" },
   { path: "/Contact", label: "Contact" },
   { path: "/InfluencerForm", label: "Influencer Form" },
-  { path: "/Talent", label: "Talent" },
+  { path: "/exclusive", label: "Exclusive" },
 ];
 
 const Navbar = () => {

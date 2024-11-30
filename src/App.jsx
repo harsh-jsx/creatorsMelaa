@@ -10,7 +10,7 @@ import InfluencerForm from "./Pages/InfluencerForm/Influencer-form";
 import { ScrollTrigger } from "gsap/all";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
-
+import Exclusive from "./Pages/Exclusive/Exclusive";
 function App() {
   const [loading, setLoading] = useState(true);
   const progressBarRef = useRef(null);
@@ -57,6 +57,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<ContactForm />} />
             <Route path="/influencer-contact" element={<InfluencerForm />} />
+            <Route path="/exclusive" element={<Exclusive />} />
           </Routes>
         </Router>
         <Footer />

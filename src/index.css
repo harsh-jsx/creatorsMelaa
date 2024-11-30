@@ -7,6 +7,13 @@
   -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
+p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  font-family: "inter";
+}
+
 *::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }

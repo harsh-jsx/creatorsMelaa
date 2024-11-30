@@ -14,7 +14,7 @@ const Loader = ({ setLoading }) => {
     })
       .to(".loader-progress", {
         width: "100%",
-        duration: 2,
+        duration: 1.5,
         ease: "power2.inOut",
       })
       .to(".loader", {
