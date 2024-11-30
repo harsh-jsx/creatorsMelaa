@@ -1,0 +1,71 @@
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  width: 400px;
+  text-align: center;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  outline: none;
+  resize: none;
+}
+
+.input-group label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #928dab;
+  font-size: 12px;
+}
+
+button {
+  background: #928dab;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #1f1c2c;
+}

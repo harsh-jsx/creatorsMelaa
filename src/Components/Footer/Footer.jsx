@@ -1,53 +1,76 @@
 import React from "react";
-import "./footer.css";
+import "./Footer.css"; // Import the CSS file
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <div className="footer">
       <div className="footer-content">
-        <h1>
-          Your Brand's <span className="highlight">Creative</span> Partner
-        </h1>
-        <div className="contact-info">
-          <p>Reach us at</p>
-          <a href="mailto:connect@creativefuel.io">connect@creativefuel.io</a>
-          <address>
-            105, Gravity Mall
-            <br />
-            Vijay Nagar Indore
-            <br />
-            Madhya Pradesh 452010
-          </address>
-          <p>Privacy Policy</p>
+        <div className="footer-section about">
+          <h1 className="logo-text">
+            Creators<span>Mela</span>
+          </h1>
+          <p>Empowering Creators, Elevating Brands</p>
+          <p>Connect To Our Socials</p>
+          <div className="socials">
+            <a href="#">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i className="fab fa-linkedin"></i>
+            </a>
+          </div>
         </div>
-        <nav className="footer-nav">
-          <a href="#">About</a>
-          <a href="#">Projects</a>
-          <a href="#">Contact</a>
-          <a href="#">Blogs</a>
-          <a href="#" className="highlight">
-            We're hiring
-          </a>
-        </nav>
-        <div className="social-icons">
-          <a href="#">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="#">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#">
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="#">
-            <i className="fab fa-youtube"></i>
-          </a>
-          <a href="#">
-            <i className="fab fa-whatsapp"></i>
-          </a>
+        <div className="footer-section links">
+          <h2>Our links</h2>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About Us</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Exclusive Talent</a>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-section links">
+          <h2>Other links</h2>
+          <ul>
+            <li>
+              <a href="#">Join as Influencer</a>
+            </li>
+            <li>
+              <a href="#">YouTube Thumbnail Downloader</a>
+            </li>
+            <li>
+              <a href="#">FAQ</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-section contact">
+          <h2>Contact Us</h2>
+          <div className="contact-item">
+            <i className="fas fa-phone"></i> +91 83021 25887
+          </div>
+          <div className="contact-item">
+            <i className="fas fa-envelope"></i> team@creatorsmela.com
+          </div>
+          <div className="contact-item">
+            <i className="fas fa-map-marker-alt"></i> Rajasthan, India (IN)
+          </div>
         </div>
       </div>
-    </footer>
+      <div className="footer-bottom">
+        &copy; 2024 CreatorsMela. All rights reserved.
+      </div>
+    </div>
   );
 };
 

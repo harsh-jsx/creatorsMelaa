@@ -76,9 +76,6 @@ const Carousel = () => {
     <>
       <div id="overlay" ref={overlayRef} className="overlay"></div>
       <div className="carousel-container" ref={testimonialRef}>
-        <button className="carousel-button" onClick={prevTestimonial}>
-          &lt;
-        </button>
         <div className="testimonial">
           <img
             src={testimonials[current].image}
@@ -88,9 +85,7 @@ const Carousel = () => {
           <h3>{testimonials[current].name}</h3>
           <p>{testimonials[current].text}</p>
         </div>
-        <button className="carousel-button" onClick={nextTestimonial}>
-          &gt;
-        </button>
+        <button className="carousel-button" onClick={nextTestimonial}></button>
         <div className="dots">
           {testimonials.map((_, index) => (
             <span

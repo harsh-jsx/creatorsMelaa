@@ -2,15 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import Loader from "./Components/Loader/Loader";
 import Cursor from "./Components/Cursor/Cursor";
 import Navbar from "./Components/Navbar/Navbar";
-import Clients from "./Components/OurClients/Clients";
-import Creators from "./Components/Creators/Creators";
-import Home from "./Pages/Home";
-import Footer from "./Components/Footer/Footer";
-import Offers from "./Components/WhatWeOffer/Offers";
+import Home from "./Pages/HomePage/Home";
 import Lenis from "lenis";
 import gsap from "gsap";
+import ContactForm from "./Pages/ContactPage/ContactUs";
+import InfluencerForm from "./Pages/InfluencerForm/Influencer-form";
 import { ScrollTrigger } from "gsap/all";
-import Testimonials from "./Components/Testimonials/Testimonials";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -53,12 +52,14 @@ function App() {
       <div id="smooth-content">
         <Cursor />
         <Navbar />
-        <Home />
-        <Creators />
-        <Clients />
-        <Offers />
-        <Testimonials />
-        {/* <Footer /> */}
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<ContactForm />} />
+            <Route path="/influencer-contact" element={<InfluencerForm />} />
+          </Routes>
+        </Router>
+        <Footer />
       </div>
     </div>
   );

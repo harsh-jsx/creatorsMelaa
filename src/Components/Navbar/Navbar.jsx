@@ -10,6 +10,7 @@ const menuLinks = [
   { path: "/", label: "Home" },
   { path: "/services", label: "Services" },
   { path: "/Contact", label: "Contact" },
+  { path: "/InfluencerForm", label: "Influencer Form" },
   { path: "/Talent", label: "Talent" },
 ];
 
@@ -61,7 +62,9 @@ const Navbar = () => {
     <div className="menu-container" ref={container}>
       <div className="menu-bar">
         <div className="menu-logo">
-          <img src={logo} alt="" className="logo-image" />
+          <a href="#">
+            <img src={logo} alt="" className="logo-image" />
+          </a>
         </div>
         <div className="menu-open" onClick={toggleMenu}>
           <p>Menu</p>
