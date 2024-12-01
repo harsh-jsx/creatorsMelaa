@@ -184,6 +184,22 @@ const Exclusive = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
+    {
+      name: "Creator Name",
+      image:
+        "https://pbs.twimg.com/profile_images/1574632616485330944/sjgI-3q6_400x400.jpg",
+      role: "Creator Role",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      name: "Creator Name",
+      image:
+        "https://pbs.twimg.com/profile_images/1574632616485330944/sjgI-3q6_400x400.jpg",
+      role: "Creator Role",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
   ];
 
   return (

@@ -2,23 +2,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  min-height: 100vh;
+  background: #000;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .contact-form {
-  background: rgba(255, 255, 255, 0.1);
+  background: #6a0dad;
   padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(106, 13, 173, 0.3);
+  width: 100%;
+  max-width: 400px;
   text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(106, 13, 173, 0.4);
 }
 
 .contact-form h2 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #fff;
+  font-size: 32px;
 }
 
 .input-group {
@@ -29,20 +39,28 @@
 .input-group input,
 .input-group textarea {
   width: 100%;
-  padding: 10px;
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid #fff;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
   color: #fff;
   outline: none;
   resize: none;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #8a2be2;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .input-group label {
   position: absolute;
-  left: 10px;
-  top: 10px;
-  color: #fff;
+  left: 12px;
+  top: 12px;
+  color: rgba(255, 255, 255, 0.8);
   pointer-events: none;
   transition: 0.3s;
 }
@@ -53,19 +71,25 @@
 .input-group textarea:valid ~ label {
   top: -20px;
   left: 0;
-  color: #928dab;
+  color: #fff;
   font-size: 12px;
 }
 
 button {
-  background: #928dab;
+  background: #8a2be2;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
+  border-radius: 8px;
   color: #fff;
+  font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 button:hover {
-  background: #1f1c2c;
+  background: #9b4deb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4);
 }

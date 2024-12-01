@@ -8,11 +8,15 @@
   color: white;
   text-align: center;
   margin-bottom: 100px;
+  max-width: 1500px; /* Added to control container width */
+  margin-left: auto; /* Center container */
+  margin-right: auto; /* Center container */
 }
 
 .exclusive-card {
   flex: 1 1 300px;
-  max-width: 350px;
+  max-width: calc(25% - 20px); /* Ensures max 4 cards per row with gap */
+  min-width: 250px; /* Prevents cards from getting too small */
   border-radius: 10px;
   background-color: #121212;
   padding: 20px;

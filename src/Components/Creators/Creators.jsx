@@ -14,13 +14,13 @@ const Creators = () => {
 
     // Horizontal scroll animation
     gsap.to(images, {
-      xPercent: -450,
+      xPercent: -350,
       scrollTrigger: {
         trigger: container,
         start: "top 20%", // Adjust to start when the top of the container hits the top of the viewport
         pin: true,
-        scrub: 1,
-        end: "1500",
+        scrub: 3.5, // Increased scrub value to make animation slower
+        end: "3000", // Increased end value to make the scroll distance longer
         invalidateOnRefresh: true,
       },
     });
@@ -86,7 +86,7 @@ const Creators = () => {
           <div className="creator-card creator-card-last hover-change">
             <h1>Know more</h1>
             <h2>
-              Click <a href="/creators">HERE</a> to know our creators
+              Click <a href="/exclusive">HERE</a> to know our creators
             </h2>
           </div>
         </div>

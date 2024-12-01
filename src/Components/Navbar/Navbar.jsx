@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 
 const menuLinks = [
   { path: "/", label: "Home" },
-  { path: "/services", label: "Services" },
+  { path: "/exclusive", label: "Exclusive Talent" },
   { path: "/Contact", label: "Contact" },
-  { path: "/InfluencerForm", label: "Influencer Form" },
-  { path: "/exclusive", label: "Exclusive" },
+  { path: "/influencer-contact", label: "Influencer Form" },
+  { path: "/blogs", label: "Blogs" },
 ];
 
 const Navbar = () => {
@@ -62,7 +62,7 @@ const Navbar = () => {
     <div className="menu-container" ref={container}>
       <div className="menu-bar">
         <div className="menu-logo">
-          <a href="#">
+          <a href="/">
             <img src={logo} alt="" className="logo-image" />
           </a>
         </div>
