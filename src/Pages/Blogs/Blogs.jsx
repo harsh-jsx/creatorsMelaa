@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Blogs.css";
 import gsap from "gsap";
-import axios from "axios";
 
 const Exclusive = () => {
   const containerRef = useRef(null);
@@ -105,18 +104,24 @@ const Exclusive = () => {
     <>
       <div className="exclusive-container" ref={containerRef}>
         {blogs.map((blog, index) => (
-          <div
-            className="exclusive-card hover-change kuch-bhi"
-            key={index}
-            ref={(el) => (cardsRef.current[index] = el)}
+          <a
+            href={`/blogs/${blog.documentId}`}
+            target="_blank"
+            rel="noreferrer"
           >
-            <h1>{blog.title}</h1>
-            <img
-              src={"http://localhost:1337" + blog.image.url}
-              alt={blog.title}
-            />
-            <p>{blog.description}</p>
-          </div>
+            <div
+              className="exclusive-card hover-change kuch-bhi"
+              key={index}
+              ref={(el) => (cardsRef.current[index] = el)}
+            >
+              <h1>{blog.title}</h1>
+              <img
+                src={"http://localhost:1337" + blog.image.url}
+                alt={blog.title}
+              />
+              <p>{blog.author}</p>
+            </div>
+          </a>
         ))}
       </div>
     </>

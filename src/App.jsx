@@ -12,6 +12,7 @@ import InfluencerForm from "./Pages/InfluencerForm/Influencer-form";
 import Footer from "./Components/Footer/Footer";
 import Exclusive from "./Pages/Exclusive/Exclusive";
 import Blogs from "./Pages/Blogs/Blogs";
+import BlogPage from "./Pages/BlogPage/BlogPage";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -61,9 +62,10 @@ function App() {
             <Route path="/influencer-contact" element={<InfluencerForm />} />
             <Route path="/exclusive" element={<Exclusive />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/:id" element={<BlogPage />} />
           </Routes>
         </Router>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );
