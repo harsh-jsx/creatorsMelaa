@@ -10,7 +10,7 @@ const Footer = () => {
             Creators<span>Mela</span>
           </h1>
           <p>Empowering Creators, Elevating Brands</p>
-          <p>Connect To Our Socials</p>
+          {/* <p>Connect To Our Socials</p> */}
           <div className="socials">
             <a href="#">
               <i className="fab fa-instagram"></i>
