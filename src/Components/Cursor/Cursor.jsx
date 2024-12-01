@@ -26,6 +26,7 @@ const Cursor = () => {
       gsap.to(cursorDot, {
         x: clientX,
         y: clientY,
+        duration: 0.1,
       });
     };
 

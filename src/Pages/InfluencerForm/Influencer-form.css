@@ -75,7 +75,7 @@
   font-size: 12px;
 }
 
-button {
+.input-group button {
   background: #8a2be2;
   border: none;
   padding: 12px 24px;
@@ -88,7 +88,7 @@ button {
   box-sizing: border-box;
 }
 
-button:hover {
+.input-group button:hover {
   background: #9b4deb;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4);

@@ -31,6 +31,18 @@
   box-sizing: border-box;
 }
 
+span {
+  display: inline-block;
+}
+
+#space {
+  display: inline-block;
+}
+
+.word {
+  margin: 0 5px;
+}
+
 .main-title {
   font-size: 3rem;
   margin: 0;
@@ -40,9 +52,17 @@
   color: #e91e63; /* Pink color */
 }
 
+.highlight span {
+  display: inline-block;
+}
+
 .subtitle {
   font-size: 2rem;
   margin: 10px 0;
+}
+
+.subtitle .word span {
+  display: inline-block;
 }
 
 .description {
@@ -50,19 +70,64 @@
   margin-bottom: 20px;
 }
 
-.cta-button {
-  background-color: #9c27b0; /* Purple color */
+#home-cta-button {
+  width: 100%;
+  height: 0px;
+  background: transparent;
+  border: 1px solid #9c27b0; /* Purple color */
   color: white;
-  padding: 10px 10px;
-  border: none;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  overflow: hidden;
+  position: relative;
 }
 
-.cta-button:hover {
-  background-color: #7b1fa2; /* Darker purple */
+#home-cta-button::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  border-radius: 0;
+  background: #9c27b0;
+  width: 100%;
+  height: 100%;
+  transition: all ease 1s;
+  z-index: -1;
+}
+
+#home-cta-button::after {
+  content: "";
+  position: absolute;
+  right: -100%;
+  top: 0;
+  border-radius: 0;
+  background: #9c27b0;
+  width: 100%;
+  height: 100%;
+  transition: all ease 1s;
+  z-index: -1;
+}
+
+#home-cta-button:hover::after {
+  right: 0;
+
+  border-radius: 0;
+}
+
+#home-cta-button:hover::before {
+  left: 0;
+  border-radius: 0;
+}
+
+#home-cta-button h5 {
+  vertical-align: middle;
+  z-index: 10;
+  transition: all ease 1s;
+}
+
+#home-cta-button:hover h5 {
+  transform: rotateX("360deg");
 }
 
 /* Responsive styles */
@@ -80,7 +145,6 @@
   }
 
   .cta-button {
-    padding: 8px 16px;
     font-size: 0.9rem;
   }
 }

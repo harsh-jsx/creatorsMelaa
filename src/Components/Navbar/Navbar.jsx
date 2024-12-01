@@ -22,6 +22,11 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!IsMenuOpen);
+    if (IsMenuOpen) {
+      tl.current.play();
+    } else {
+      tl.current.reverse();
+    }
   };
 
   useGSAP(
@@ -46,17 +51,23 @@ const Navbar = () => {
           ease: "power4.inOut",
           delay: -0.75,
         });
+      gsap.from(".menu-logo", {
+        y: -200,
+        duration: 2,
+        delay: 3,
+        ease: "power4.inOut",
+      });
+      gsap.from(".menu-open", {
+        y: -200,
+        duration: 2,
+        delay: 3,
+        ease: "power4.inOut",
+      });
     },
     { scope: container }
   );
 
-  useEffect(() => {
-    if (IsMenuOpen) {
-      tl.current.play();
-    } else {
-      tl.current.reverse();
-    }
-  }, [IsMenuOpen]);
+  useEffect(() => {}, [IsMenuOpen]);
 
   return (
     <div className="menu-container" ref={container}>

@@ -18,8 +18,9 @@ const Loader = ({ setLoading }) => {
         ease: "power2.inOut",
       })
       .to(".loader", {
-        opacity: 0,
-        duration: 0.5,
+        y: "-100%",
+        duration: 1,
+        ease: "power4.inOut",
       });
   }, []);
 
