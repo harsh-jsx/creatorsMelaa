@@ -52,8 +52,8 @@ function App() {
       {loading && <Loader setLoading={setLoading} />}
       <div ref={progressBarRef} className="progress-bar"></div>
       <div id="smooth-content">
-        <Cursor />
         <Navbar />
+        <Cursor />
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
