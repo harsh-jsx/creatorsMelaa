@@ -63,7 +63,7 @@ function App() {
             <Route path="/blogs" element={<Blogs />} />
           </Routes>
         </Router>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );
