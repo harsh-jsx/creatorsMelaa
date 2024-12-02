@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Blogs.css";
 import gsap from "gsap";
 
-const Exclusive = () => {
+const blog = () => {
   const containerRef = useRef(null);
   const cardsRef = useRef([]);
   const [blogs, setBlogs] = useState([]);
@@ -10,7 +10,7 @@ const Exclusive = () => {
   const fetchData = async () => {
     try {
       const res = await fetch(
-        "http://localhost:1337/api/blogs?populate=image",
+        "https://cms.dev80.tech/api/blogs?populate=image",
         {
           method: "GET",
           headers: {
@@ -20,7 +20,7 @@ const Exclusive = () => {
       );
       const data = await res.json();
       setBlogs(data.data);
-      console.log(blogs);
+      console.log(...blogs);
     } catch (error) {
       console.log(error);
     }
@@ -98,34 +98,35 @@ const Exclusive = () => {
     });
   }, []);
 
-  console.log(blogs);
-
   return (
     <>
-      <div className="exclusive-container" ref={containerRef}>
+      <div className="blog-container hover-change" ref={containerRef}>
         {blogs.map((blog, index) => (
-          <a
-            href={`/blogs/${blog.documentId}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div
-              className="exclusive-card hover-change kuch-bhi"
-              key={index}
-              ref={(el) => (cardsRef.current[index] = el)}
+          <div className="card-container hover-change">
+            <a
+              href={`/blogs/${blog.documentId}`}
+              target="_blank"
+              rel="noreferrer"
             >
-              <h1>{blog.title}</h1>
-              <img
-                src={"http://localhost:1337" + blog.image.url}
-                alt={blog.title}
-              />
-              <p>{blog.author}</p>
-            </div>
-          </a>
+              <div
+                className="blog-card hover-change kuch-bhi"
+                key={index}
+                ref={(el) => (cardsRef.current[index] = el)}
+              >
+                <h1>{blog?.title}</h1>
+                <img
+                  className="blog-card-image"
+                  src={"http://cms.dev80.tech/" + blog?.image[0].url}
+                  alt={blog.title}
+                />
+                <p>{blog?.author}</p>
+              </div>
+            </a>
+          </div>
         ))}
       </div>
     </>
   );
 };
 
-export default Exclusive;
+export default blog;

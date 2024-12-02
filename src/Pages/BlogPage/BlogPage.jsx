@@ -10,7 +10,7 @@ const BlogPage = () => {
 
   const fetchBlog = async () => {
     const response = await axios.get(
-      `http://localhost:1337/api/blogs/${id}?populate=*`
+      `https://cms.dev80.tech/api/blogs/${id}?populate=*`
     );
     setBlog(response.data.data);
     console.log(response.data.data);
