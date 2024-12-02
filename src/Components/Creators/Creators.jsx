@@ -26,7 +26,19 @@ const Creators = () => {
           invalidateOnRefresh: true,
         },
       });
-    } else {
+    } else if (windowWidth > 500 && windowWidth < 1000) {
+      gsap.to(images, {
+        xPercent: -600,
+        scrollTrigger: {
+          trigger: container,
+          start: "top 20%", // Adjust to start when the top of the container hits the top of the viewport
+          pin: true,
+          scrub: 3.5, // Increased scrub value to make animation slower
+          end: "3000", // Increased end value to make the scroll distance longer
+          invalidateOnRefresh: true,
+        },
+      });
+    } else if (windowWidth < 500) {
       gsap.to(images, {
         xPercent: -560,
         scrollTrigger: {
