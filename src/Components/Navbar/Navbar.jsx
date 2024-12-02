@@ -40,7 +40,7 @@ const Navbar = () => {
           ease: "power4.inOut",
         })
         .to(".menu-overlay", {
-          duration: 3,
+          duration: 1,
           clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
           ease: "power4.inOut",
         })
@@ -54,13 +54,13 @@ const Navbar = () => {
       gsap.from(".menu-logo", {
         y: -200,
         duration: 2,
-        delay: 8,
+        delay: 3,
         ease: "power4.inOut",
       });
       gsap.from(".menu-open", {
         y: -200,
         duration: 2,
-        delay: 8,
+        delay: 3,
         ease: "power4.inOut",
       });
     },

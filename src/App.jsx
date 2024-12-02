@@ -157,7 +157,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div id="smooth-wrapper">
-        {loading && <LoaderTwo setLoading={setLoading} />}
+        {loading && <Loader setLoading={setLoading} />}
         <div ref={progressBarRef} className="progress-bar"></div>
         <div id="smooth-content">
           <Navbar />

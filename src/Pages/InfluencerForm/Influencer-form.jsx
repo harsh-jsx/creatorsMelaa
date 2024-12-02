@@ -39,7 +39,9 @@ const ContactForm = () => {
             <textarea required></textarea>
             <label>Message</label>
           </div>
-          <button type="submit">Send</button>
+          <button className="input-group-button" type="submit">
+            Send
+          </button>
         </form>
       </div>
     </>

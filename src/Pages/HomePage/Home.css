@@ -13,13 +13,14 @@
 
 .home video {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   min-width: 100%;
   opacity: 0.3;
   min-height: 100%;
   width: auto;
   height: auto;
+  transform: translate(-50%, -50%);
   z-index: -1;
 }
 
@@ -144,7 +145,7 @@ span {
   }
 
   .cta-button {
-    font-size: 0.9rem;
+    font-size: 0.9 rem;
   }
 }
 
@@ -164,5 +165,39 @@ span {
   .cta-button {
     padding: 6px 12px;
     font-size: 0.8rem;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .home {
+    padding: 10px;
+  }
+
+  .hero-section {
+    text-align: center;
+  }
+
+  .main-title {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+
+  .subtitle {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+
+  .description {
+    font-size: 0.9rem; /* Adjust font size for mobile */
+  }
+
+  #home-cta-button {
+    width: 500px;
+    height: auto;
+    padding: 10px;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
   }
 }
