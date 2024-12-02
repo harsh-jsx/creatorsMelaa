@@ -14,39 +14,42 @@ const Creators = () => {
     const images = container.querySelectorAll(".creator-card");
 
     // Horizontal scroll animation
-    if (windowWidth > 500) {
+    if (windowWidth > 1024) {
+      // PC
       gsap.to(images, {
-        xPercent: -200,
+        xPercent: -300,
         scrollTrigger: {
           trigger: container,
-          start: "top 20%", // Adjust to start when the top of the container hits the top of the viewport
+          start: "top 25%",
           pin: true,
-          scrub: 3.5, // Increased scrub value to make animation slower
-          end: "3000", // Increased end value to make the scroll distance longer
+          scrub: 2.5,
+          end: "3000",
           invalidateOnRefresh: true,
         },
       });
-    } else if (windowWidth > 500 && windowWidth < 1000) {
+    } else if (windowWidth > 768) {
+      // Laptop
       gsap.to(images, {
         xPercent: -600,
         scrollTrigger: {
           trigger: container,
-          start: "top 20%", // Adjust to start when the top of the container hits the top of the viewport
+          start: "top 20%",
           pin: true,
-          scrub: 3.5, // Increased scrub value to make animation slower
-          end: "3000", // Increased end value to make the scroll distance longer
+          scrub: 3.5,
+          end: "3000",
           invalidateOnRefresh: true,
         },
       });
-    } else if (windowWidth < 500) {
+    } else {
+      // Mobile
       gsap.to(images, {
         xPercent: -560,
         scrollTrigger: {
           trigger: container,
-          start: "top 20%", // Adjust to start when the top of the container hits the top of the viewport
+          start: "top 20%",
           pin: true,
-          scrub: 3.5, // Increased scrub value to make animation slower
-          end: "3000", // Increased end value to make the scroll distance longer
+          scrub: 3.5,
+          end: "3000",
           invalidateOnRefresh: true,
         },
       });
