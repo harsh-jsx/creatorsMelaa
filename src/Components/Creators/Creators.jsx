@@ -17,7 +17,7 @@ const Creators = () => {
     if (windowWidth > 1024) {
       // PC
       gsap.to(images, {
-        xPercent: -300,
+        xPercent: -250,
         scrollTrigger: {
           trigger: container,
           start: "top 25%",
