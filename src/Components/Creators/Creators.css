@@ -33,7 +33,7 @@
 
 .creator-card {
   flex: 0 0 auto;
-  width: min(400px, 80vw); /* Increased from 300px to 400px for PC */
+  width: min(300px, 80vw);
   aspect-ratio: 3/4;
   border-radius: 20px;
   overflow: hidden;
