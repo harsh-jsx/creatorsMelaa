@@ -25,7 +25,7 @@ const BlogPage = () => {
   const date = new Date(blog?.createdAt);
   const ourData = date.toLocaleDateString();
   console.log(ourData);
-
+  console.log(blog);
   return (
     <div className="blogs-page">
       <header className="blogs-header">
@@ -39,7 +39,7 @@ const BlogPage = () => {
           <article key={blog?.id}>
             <img
               className="blog-page-image"
-              src={`http://localhost:1337${blog?.image.url}`}
+              src={`https://cms.dev80.tech${blog?.image[0].url}`}
               alt={blog?.title}
             />
             <p className="blog-page-author">• {blog?.author}</p>{" "}
