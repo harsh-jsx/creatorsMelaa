@@ -77,8 +77,8 @@
 }
 
 .menu-link {
-  font-family: "Times New Roman", serif;
-  font-size: 5rem;
+  font-family: int, serif;
+  font-size: 4rem;
   color: #f2e5d0;
   text-decoration: none;
   display: inline-block;
