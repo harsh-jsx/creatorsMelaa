@@ -1,29 +1,101 @@
 import React from "react";
 import "./ContactForm.css";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
+
 const ContactForm = () => {
   return (
     <>
       <div className="contact-form-container">
-        <form className="contact-form">
-          <h2>Contact Us</h2>
-          <div className="input-group">
-            <input type="text" required />
-            <label>Name</label>
-          </div>
-          <div className="input-group">
-            <input type="tel" required />
-            <label>Number</label>
-          </div>
-          <div className="input-group">
-            <input type="email" required />
-            <label>Email</label>
-          </div>
-          <div className="input-group">
-            <textarea required></textarea>
-            <label>Message</label>
-          </div>
-          <button type="submit">Send</button>
-        </form>
+        <Box
+          component="form"
+          sx={{
+            background: "#0C1017",
+            p: 3,
+            border: "1px solid #242A37",
+            boxShadow: "0px 0px 100px 100px #0C1017",
+          }}
+        >
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#fff",
+              fontWeight: "bold",
+              fontFamily: '"Inter", sans-serif',
+              mb: 4,
+            }}
+          >
+            Contact Us
+          </Typography>
+          <TextField
+            variant="outlined"
+            label="Full Name"
+            type="text"
+            fullWidth
+            sx={{
+              input: { color: "#fff" },
+              label: { color: "#fff" },
+            }}
+          />
+          <Stack direction="row" spacing={3} sx={{ marginY: 2 }}>
+            <TextField
+              variant="outlined"
+              label="Email"
+              type="email"
+              sx={{
+                input: { color: "#fff" },
+                width: 250,
+                label: { color: "#fff" },
+              }}
+            />
+            <TextField
+              variant="outlined"
+              label="Phone"
+              type="number"
+              sx={{
+                input: { color: "#fff" },
+                width: 250,
+                label: { color: "#fff" },
+              }}
+            />
+          </Stack>
+          <TextField
+            variant="outlined"
+            label="Message"
+            type="text"
+            fullWidth
+            multiline
+            rows={5}
+            sx={{
+              input: { color: "#fff" },
+              label: { color: "#fff" },
+            }}
+          />
+          <Box
+            component="section"
+            sx={{
+              marginTop: 3,
+              display: "flex",
+              justifyContent: "flex-end",
+              alignItems: "center",
+              gap: 2,
+            }}
+          >
+            <Button
+              variant="contained"
+              type="submit"
+              fullWidth
+              sx={{
+                background: "green",
+              }}
+            >
+              Submit
+            </Button>
+          </Box>
+        </Box>
       </div>
     </>
   );
