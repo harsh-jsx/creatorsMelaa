@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Creators.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -7,23 +7,38 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Creators = () => {
   const containerRef = useRef(null);
+  const [windowWidth, setwindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const container = containerRef.current;
     const images = container.querySelectorAll(".creator-card");
 
     // Horizontal scroll animation
-    gsap.to(images, {
-      xPercent: -200,
-      scrollTrigger: {
-        trigger: container,
-        start: "top 20%", // Adjust to start when the top of the container hits the top of the viewport
-        pin: true,
-        scrub: 3.5, // Increased scrub value to make animation slower
-        end: "3000", // Increased end value to make the scroll distance longer
-        invalidateOnRefresh: true,
-      },
-    });
+    if (windowWidth > 500) {
+      gsap.to(images, {
+        xPercent: -200,
+        scrollTrigger: {
+          trigger: container,
+          start: "top 20%", // Adjust to start when the top of the container hits the top of the viewport
+          pin: true,
+          scrub: 3.5, // Increased scrub value to make animation slower
+          end: "3000", // Increased end value to make the scroll distance longer
+          invalidateOnRefresh: true,
+        },
+      });
+    } else {
+      gsap.to(images, {
+        xPercent: -560,
+        scrollTrigger: {
+          trigger: container,
+          start: "top 20%", // Adjust to start when the top of the container hits the top of the viewport
+          pin: true,
+          scrub: 3.5, // Increased scrub value to make animation slower
+          end: "3000", // Increased end value to make the scroll distance longer
+          invalidateOnRefresh: true,
+        },
+      });
+    }
 
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
