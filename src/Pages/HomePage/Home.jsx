@@ -54,7 +54,7 @@ const Home = () => {
       y: 50,
       opacity: 0,
       duration: 1,
-      delay: 3,
+      delay: 8,
 
       stagger: {
         each: 0.02, // time between each animation
@@ -71,7 +71,7 @@ const Home = () => {
         y: 50,
         opacity: 0,
         duration: 0.8,
-        delay: 3,
+        delay: 8,
 
         stagger: {
           each: 0.05, // time between each animation
@@ -81,14 +81,13 @@ const Home = () => {
       });
       gsap.from("video", {
         duration: 1.5,
-        delay: 3.2,
-        filter: "blur(40px)",
+        delay: 8,
         ease: "power4.inOut",
       });
       gsap.from("#home-cta-button", {
         width: 0,
         duration: 2,
-        delay: 3,
+        delay: 8,
         ease: "power4.inOut",
         onComplete: () => {
           gsap.to("#home-cta-button", {
@@ -105,7 +104,7 @@ const Home = () => {
   return (
     <>
       <div className="home" ref={container}>
-        <video autoPlay loop muted playsInline>
+        <video loop muted playsInline id="bg-home-video">
           <source
             src="https://www.famebliss.com/assets/slider.mp4"
             type="video/mp4"

@@ -19,6 +19,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { outlinedInputClasses } from "@mui/material/OutlinedInput";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import LoaderTwo from "./Components/LoaderTwo/LoaderTwo";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -156,7 +157,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div id="smooth-wrapper">
-        {loading && <Loader setLoading={setLoading} />}
+        {loading && <LoaderTwo setLoading={setLoading} />}
         <div ref={progressBarRef} className="progress-bar"></div>
         <div id="smooth-content">
           <Navbar />

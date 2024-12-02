@@ -1,0 +1,23 @@
+.loader-two-wrapper {
+  background: #000;
+  z-index: 100;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loader-two-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 50px;
+}
+
+.loader-two-container img {
+  width: 400px;
+  opacity: 0.3;
+  object-fit: cover;
+  position: relative;
+}
