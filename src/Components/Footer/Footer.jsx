@@ -68,7 +68,13 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        &copy; 2024 CreatorsMela. All rights reserved.
+        <p>
+          &copy; 2024 CreatorsMela. All rights reserved. <br /> Made with ❤️ by
+          <a href="https://bio.harshdev.in" target="_blank">
+            {" "}
+            Harsh
+          </a>
+        </p>
       </div>
     </div>
   );

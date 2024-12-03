@@ -36,7 +36,7 @@ const Creators = () => {
           start: "top 20%",
           pin: true,
           scrub: 3.5,
-          end: "3000",
+          end: "2300",
           invalidateOnRefresh: true,
         },
       });
@@ -49,7 +49,7 @@ const Creators = () => {
           start: "top 20%",
           pin: true,
           scrub: 3.5,
-          end: "3000",
+          end: "2300",
           invalidateOnRefresh: true,
         },
       });
