@@ -204,6 +204,12 @@ const Exclusive = () => {
 
   return (
     <>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1 className="exclusive-heading">Our Exclusive Talent</h1>
       <div className="exclusive-container" ref={containerRef}>
         {creators.map((creator, index) => (
           <div

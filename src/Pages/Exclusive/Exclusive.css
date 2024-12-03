@@ -4,13 +4,21 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
+
   height: 100vh;
   color: white;
   text-align: center;
-  margin-bottom: 100px;
   max-width: 1500px; /* Added to control container width */
   margin-left: auto; /* Center container */
   margin-right: auto; /* Center container */
+}
+
+.exclusive-heading {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+  color: white;
 }
 
 .exclusive-card {
