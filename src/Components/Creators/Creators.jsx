@@ -23,7 +23,7 @@ const Creators = () => {
           start: "top 25%",
           pin: true,
           scrub: 2.5,
-          end: "3000",
+          end: "2300",
           invalidateOnRefresh: true,
         },
       });
