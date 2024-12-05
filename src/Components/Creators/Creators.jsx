@@ -107,7 +107,7 @@ const Creators = () => {
           </div>
           <div className="creator-card hover-change">
             <img
-              src="https://yt3.googleusercontent.com/Wbpsrq8hmGAP1X14xpPKmkuro2d6ys6DNk9-rELaJtQA972uco8mjYrYKJ6tB0ISXd8qx6Fz=s900-c-k-c0x00ffffff-no-rj"
+              src="https://media.licdn.com/dms/image/D4D03AQHbc72Y1jLxvQ/profile-displayphoto-shrink_800_800/0/1684913289252?e=2147483647&v=beta&t=EkIl2-nndbE5R7lKKQXuSnHKxmiabYjPpJkk0QJee2Q"
               alt=""
             />
             <h1>Creator Name 6</h1>

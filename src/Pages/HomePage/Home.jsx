@@ -142,8 +142,8 @@ const Home = () => {
         </div>
       </div>
       <Creators />
-      <Clients />
       <Offers />
+      <Clients />
       <Testimonials />
     </>
   );

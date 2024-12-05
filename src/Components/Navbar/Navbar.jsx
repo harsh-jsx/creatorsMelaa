@@ -4,7 +4,6 @@ import "./nav.css";
 import { gsap } from "gsap";
 import logo from "../../assets/logo.png";
 import { useGSAP } from "@gsap/react";
-import { Link } from "react-router-dom";
 
 const menuLinks = [
   { path: "/", label: "Home" },
