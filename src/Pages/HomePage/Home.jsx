@@ -142,7 +142,7 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <Specializations />
+      {/* <Specializations /> */}
       <Creators />
       <Offers />
       <Testimonials />
