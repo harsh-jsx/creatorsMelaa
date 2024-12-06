@@ -50,7 +50,7 @@ const Carousel = () => {
 
   return (
     <>
-      <div className="carousel-container" ref={testimonialRef}>
+      <div className="carouseal-container" ref={testimonialRef}>
         <button className="carousel-button prev" onClick={prevTestimonial}>
           <svg
             fill="#ffffff"
