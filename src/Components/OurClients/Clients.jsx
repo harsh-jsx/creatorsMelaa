@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import "./clients.css";
 
 const Clients = () => {
@@ -45,10 +46,28 @@ const Clients = () => {
     },
   ];
 
+  const clientsRef = useRef(null);
+
+  useEffect(() => {
+    const animation = gsap.to(clientsRef.current, {
+      xPercent: -100,
+      duration: 10,
+      ease: "linear",
+      repeat: -1,
+      modifiers: {
+        xPercent: gsap.utils.unitize((x) => parseFloat(x) % 100),
+      },
+    });
+
+    return () => {
+      animation.kill();
+    };
+  }, []);
+
   return (
     <div className="clients-container">
       <h1>Our clients</h1>
-      <div className="clients">
+      <div className="clients" ref={clientsRef}>
         {[...Array(2)].map((_, index) => (
           <div className="client" key={index}>
             {clientLogos.map((logo, idx) => (

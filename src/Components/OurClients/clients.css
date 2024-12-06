@@ -2,9 +2,8 @@
   width: 100%;
   overflow: hidden;
   background-color: white;
-  /* background: linear-gradient(135deg, #000000, #8b005d); */
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .clients-container h1 {
@@ -14,7 +13,7 @@
 
 .clients {
   display: flex;
-  animation: scroll 10s linear infinite;
+  /* animation: scroll 5s linear infinite; */
 }
 
 .client {
@@ -27,17 +26,16 @@
   height: 60px;
   object-fit: contain;
 }
-
+/* 
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
-}
+} */
 
-/* Optional: Pause animation on hover */
 .clients:hover {
   animation-play-state: paused;
 }
