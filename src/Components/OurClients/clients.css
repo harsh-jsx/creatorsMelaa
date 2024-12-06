@@ -14,7 +14,7 @@
 
 .clients {
   display: flex;
-  animation: scroll 5s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 .client {
@@ -33,7 +33,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
