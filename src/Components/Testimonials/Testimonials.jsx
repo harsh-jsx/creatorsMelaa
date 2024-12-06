@@ -32,10 +32,33 @@ const Carousel = () => {
     );
   }, [current]);
 
+  //   useEffect(() => {
+  //     const observer = new IntersectionObserver(
+  //       ([entry]) => {
+  //         if (entry.isIntersecting) {
+  //           overlayRef.current.style.opacity = 1;
+  //         } else {
+  //           overlayRef.current.style.opacity = 0;
+  //         }
+  //       },
+  //       { threshold: 0.5 }
+  //     );
+
+  //     if (testimonialRef.current) {
+  //       observer.observe(testimonialRef.current);
+  //     }
+
+  //     return () => {
+  //       if (testimonialRef.current) {
+  //         observer.unobserve(testimonialRef.current);
+  //       }
+  //     };
+  //   }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-    }, 5000); // Change every 4 seconds
+    }, 4000); // Change every 4 seconds
 
     return () => clearInterval(interval);
   }, [testimonials.length]);
@@ -50,7 +73,7 @@ const Carousel = () => {
 
   return (
     <>
-      <div className="carouseal-container" ref={testimonialRef}>
+      <div className="carousel-container" ref={testimonialRef}>
         <button className="carousel-button prev" onClick={prevTestimonial}>
           <svg
             fill="#ffffff"
