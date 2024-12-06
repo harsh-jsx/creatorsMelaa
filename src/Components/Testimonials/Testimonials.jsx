@@ -1,8 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import "./Testimonials.css";
-import left from "../../../public/left-arrow.svg";
-import right from "../../../public/right-arrow.svg";
 const Carousel = () => {
   const testimonials = [
     {
@@ -34,33 +32,10 @@ const Carousel = () => {
     );
   }, [current]);
 
-  //   useEffect(() => {
-  //     const observer = new IntersectionObserver(
-  //       ([entry]) => {
-  //         if (entry.isIntersecting) {
-  //           overlayRef.current.style.opacity = 1;
-  //         } else {
-  //           overlayRef.current.style.opacity = 0;
-  //         }
-  //       },
-  //       { threshold: 0.5 }
-  //     );
-
-  //     if (testimonialRef.current) {
-  //       observer.observe(testimonialRef.current);
-  //     }
-
-  //     return () => {
-  //       if (testimonialRef.current) {
-  //         observer.unobserve(testimonialRef.current);
-  //       }
-  //     };
-  //   }, []);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-    }, 4000); // Change every 4 seconds
+    }, 5000); // Change every 4 seconds
 
     return () => clearInterval(interval);
   }, [testimonials.length]);

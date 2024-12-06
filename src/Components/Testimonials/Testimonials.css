@@ -12,6 +12,8 @@
 
 .carousel-button {
   background: none;
+  margin-right: 100px;
+  margin-left: 100px;
   border: none;
   font-size: 24px;
   cursor: pointer;
@@ -80,4 +82,45 @@ svg {
   height: 20px;
   width: 20px;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .testimonial {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .testimonial-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .dots {
+    margin-top: 15px;
+  }
+
+  .dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 3px;
+  }
+  .carousel-button {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  svg {
+    height: 15px;
+    width: 15px;
+  }
 }

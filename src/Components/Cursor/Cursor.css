@@ -7,26 +7,29 @@
 .cursor {
   width: 40px;
   height: 40px;
-  border: 2px solid white;
+  border: 2px solid rgb(218, 64, 64);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: transform 0.15s ease-out, border-color 0.3s ease;
+  transition: transform 0.15s ease-out, border-color 0.3s ease,
+    background-color 0.3s ease;
   z-index: 1000;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  background-color: transparent;
 }
 
 /* Inner cursor dot */
 .cursor-dot {
   width: 8px;
   height: 8px;
-  background-color: white;
+  background-color: rgb(0, 143, 153);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 1001;
+  transition: background-color 0.3s ease;
 }
 
 /* Regular hover state */
@@ -53,6 +56,13 @@
 
 .cursor-dot--hover {
   background-color: #ff4081;
+}
+
+/* Change cursor to black when over white elements */
+.white-background:hover .cursor,
+.white-background:hover .cursor-dot {
+  background-color: black;
+  border-color: black;
 }
 
 /* Hide cursor on mobile */
