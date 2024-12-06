@@ -14,9 +14,10 @@ const ContactForm = () => {
           component="form"
           sx={{
             background: "#0C1017",
-            p: 3,
+            p: { xs: 2, sm: 3 },
             border: "1px solid #242A37",
             boxShadow: "0px 0px 100px 100px #0C1017",
+            width: { xs: "100%", sm: "auto" },
           }}
         >
           <Typography
@@ -41,14 +42,18 @@ const ContactForm = () => {
             }}
           />
 
-          <Stack direction="row" spacing={3} sx={{ marginY: 2 }}>
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={3}
+            sx={{ marginY: 2 }}
+          >
             <TextField
               variant="outlined"
               label="Email"
               type="email"
+              fullWidth
               sx={{
                 input: { color: "#fff" },
-                width: 250,
                 label: { color: "#fff" },
               }}
             />
@@ -56,9 +61,9 @@ const ContactForm = () => {
               variant="outlined"
               label="Phone"
               type="number"
+              fullWidth
               sx={{
                 input: { color: "#fff" },
-                width: 250,
                 label: { color: "#fff" },
               }}
             />
@@ -88,14 +93,18 @@ const ContactForm = () => {
             }}
           />
 
-          <Stack direction="row" spacing={3} sx={{ marginY: 2 }}>
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={3}
+            sx={{ marginY: 2 }}
+          >
             <TextField
               variant="outlined"
               label="YouTube Collab Price"
               type="number"
+              fullWidth
               sx={{
                 input: { color: "#fff" },
-                width: 250,
                 label: { color: "#fff" },
               }}
             />
@@ -103,9 +112,9 @@ const ContactForm = () => {
               variant="outlined"
               label="Instagram Collab Price"
               type="number"
+              fullWidth
               sx={{
                 input: { color: "#fff" },
-                width: 250,
                 label: { color: "#fff" },
               }}
             />

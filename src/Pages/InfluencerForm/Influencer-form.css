@@ -1,13 +1,14 @@
 .contact-form-container {
   display: flex;
   justify-content: center;
+
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(
+  /* background: linear-gradient(
     150deg,
     rgba(12, 16, 16, 1) 0%,
     rgb(41, 41, 41) 100%
-  );
+  ); */
   padding: 20px;
   box-sizing: border-box;
 }
@@ -17,5 +18,8 @@
     padding: 40px;
     margin-top: 80px;
     max-width: 90%;
+  }
+  .contact-form-container {
+    margin-top: 60px;
   }
 }
