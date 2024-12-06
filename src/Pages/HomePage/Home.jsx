@@ -143,8 +143,8 @@ const Home = () => {
       </div>
       <Creators />
       <Offers />
-      <Clients />
       <Testimonials />
+      <Clients />
     </>
   );
 };

@@ -75,3 +75,9 @@ p {
 .dot.active {
   background-color: #00ff00; /* Active dot color */
 }
+
+svg {
+  height: 20px;
+  width: 20px;
+  color: white;
+}

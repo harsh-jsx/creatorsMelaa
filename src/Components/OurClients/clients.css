@@ -3,9 +3,8 @@
   overflow: hidden;
   background-color: white;
   /* background: linear-gradient(135deg, #000000, #8b005d); */
-  padding: 20px 0;
   text-align: center;
-  padding-bottom: 90px;
+  padding-bottom: 30px;
 }
 
 .clients-container h1 {
