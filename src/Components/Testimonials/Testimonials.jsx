@@ -26,38 +26,15 @@ const Carousel = () => {
   useEffect(() => {
     gsap.fromTo(
       testimonialRef.current,
-      { opacity: 0, x: 100 },
-      { opacity: 1, x: 0, duration: 1 }
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, duration: 1, ease: "power4out" }
     );
   }, [current]);
-
-  //   useEffect(() => {
-  //     const observer = new IntersectionObserver(
-  //       ([entry]) => {
-  //         if (entry.isIntersecting) {
-  //           overlayRef.current.style.opacity = 1;
-  //         } else {
-  //           overlayRef.current.style.opacity = 0;
-  //         }
-  //       },
-  //       { threshold: 0.5 }
-  //     );
-
-  //     if (testimonialRef.current) {
-  //       observer.observe(testimonialRef.current);
-  //     }
-
-  //     return () => {
-  //       if (testimonialRef.current) {
-  //         observer.unobserve(testimonialRef.current);
-  //       }
-  //     };
-  //   }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-    }, 4000); // Change every 4 seconds
+    }, 5000); // Change every 4 seconds
 
     return () => clearInterval(interval);
   }, [testimonials.length]);

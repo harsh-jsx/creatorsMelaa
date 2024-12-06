@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "./Home.css";
 import Creators from "../../Components/Creators/Creators";
 import Clients from "../../Components/OurClients/Clients";
+import Specializations from "../../Components/Specializations/Specializations";
 import Offers from "../../Components/WhatWeOffer/Offers";
 import Testimonials from "../../Components/Testimonials/Testimonials";
 import gsap from "gsap";
@@ -141,6 +142,7 @@ const Home = () => {
           </button>
         </div>
       </div>
+      <Specializations />
       <Creators />
       <Offers />
       <Testimonials />
