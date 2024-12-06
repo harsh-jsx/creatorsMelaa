@@ -22,7 +22,6 @@ const Carousel = () => {
 
   const [current, setCurrent] = useState(0);
   const testimonialRef = useRef(null);
-  const overlayRef = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
